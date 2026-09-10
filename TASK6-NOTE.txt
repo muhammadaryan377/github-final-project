@@ -1,1 +1,0 @@
-The grading criterion requires a genuine GitHub fork relationship. The connected GitHub actions available in this chat do not include a repository-fork action, so the fork itself must be created once in the GitHub UI. After that, the verification output can be generated and saved in `forked-repo`.
