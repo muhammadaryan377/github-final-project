@@ -1,0 +1,23 @@
+$ curl -s https://api.github.com/repos/muhammadaryan377/mcino-Introduction-to-Git-and-GitHub/branches | jq -r '.[] | "\(.name) \(.commit.sha[0:7])"'
+bug-fix-revert a104dde
+bug-fix-typo e73482f
+main e73482f
+
+$ curl -s https://api.github.com/repos/muhammadaryan377/mcino-Introduction-to-Git-and-GitHub/compare/main...bug-fix-revert | jq '{status, ahead_by, behind_by}'
+{
+  "status": "ahead",
+  "ahead_by": 1,
+  "behind_by": 0
+}
+
+$ curl -s https://api.github.com/repos/muhammadaryan377/mcino-Introduction-to-Git-and-GitHub/compare/main...bug-fix-typo | jq '{status, ahead_by, behind_by}'
+{
+  "status": "identical",
+  "ahead_by": 0,
+  "behind_by": 0
+}
+
+main - default branch
+
+GitHub Branches page:
+https://github.com/muhammadaryan377/mcino-Introduction-to-Git-and-GitHub/branches
